@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Métricas de Calidad del Software</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f4f6f9;
+margin:0;
+padding:40px;
+}
+
+h1{
+text-align:center;
+color:#2c3e50;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:white;
+border-radius:10px;
+margin:15px 0;
+padding:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.02);
+}
+
+.content{
+display:none;
+margin-top:10px;
+line-height:1.6;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+th, td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#2c3e50;
+color:white;
+}
+
+.summary{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin-top:20px;
+}
+</style>
+
+<script>
+function toggleContent(id){
+var x = document.getElementById(id);
+if(x.style.display === "block"){
+x.style.display = "none";
+}else{
+x.style.display = "block";
+}
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Métricas de Calidad del Software</h1>
+
+<div class="container">
+
+<div class="card" onclick="toggleContent('definicion')">
+<h2>Definición de Métricas de Calidad</h2>
+<div class="content" id="definicion">
+<p>
+Las métricas de calidad del software son medidas utilizadas para evaluar diferentes aspectos del desarrollo y funcionamiento de un sistema. Estas métricas permiten analizar la eficiencia, confiabilidad y rendimiento del software, además de ayudar a identificar errores y mejorar tanto el proceso de desarrollo como el producto final.
+</p>
+</div>
+</div>
+
+<div class="card" onclick="toggleContent('clasificacion')">
+<h2>Clasificación de las Métricas de Calidad</h2>
+<div class="content" id="clasificacion">
+<p>Las métricas de calidad del software se clasifican principalmente en:</p>
+<ul>
+<li>Métricas de Proceso</li>
+<li>Métricas de Producto</li>
+</ul>
+</div>
+</div>
+
+<div class="card" onclick="toggleContent('proceso')">
+<h2>Métricas de Proceso</h2>
+<div class="content" id="proceso">
+
+<p><b>Descripción:</b> Evalúan cómo se desarrolla el software durante el proyecto.</p>
+
+<p><b>Características:</b></p>
+<ul>
+<li>Evalúan la eficiencia del proceso de desarrollo.</li>
+<li>Ayudan a mejorar la gestión del proyecto.</li>
+<li>Permiten identificar problemas durante el desarrollo.</li>
+<li>Analizan productividad y tiempos de trabajo.</li>
+</ul>
+
+<p><b>Ejemplos:</b></p>
+<ul>
+<li>Tiempo de desarrollo.</li>
+<li>Número de errores detectados.</li>
+<li>Tiempo promedio para corregir errores.</li>
+<li>Productividad del equipo.</li>
+</ul>
+
+</div>
+</div>
+
+<div class="card" onclick="toggleContent('producto')">
+<h2>Métricas de Producto</h2>
+<div class="content" id="producto">
+
+<p><b>Descripción:</b> Evalúan la calidad del software terminado.</p>
+
+<p><b>Características:</b></p>
+<ul>
+<li>Analizan el software final.</li>
+<li>Permiten medir rendimiento y confiabilidad.</li>
+<li>Evalúan la calidad del código.</li>
+<li>Ayudan a identificar fallos.</li>
+</ul>
+
+<p><b>Ejemplos:</b></p>
+<ul>
+<li>Número de errores en el sistema.</li>
+<li>Complejidad del código.</li>
+<li>Tiempo de respuesta.</li>
+<li>Tamaño del software (líneas de código).</li>
+</ul>
+
+</div>
+</div>
+
+<div class="card" onclick="toggleContent('comparativo')">
+<h2>Cuadro Comparativo</h2>
+<div class="content" id="comparativo">
+
+<table>
+<tr>
+<th>Característica</th>
+<th>Métrica de Proceso</th>
+<th>Métrica de Producto</th>
+</tr>
+
+<tr>
+<td>Enfoque</td>
+<td>Evalúa el proceso de desarrollo</td>
+<td>Evalúa el software terminado</td>
+</tr>
+
+<tr>
+<td>Objetivo</td>
+<td>Mejorar el proceso de desarrollo</td>
+<td>Medir la calidad del producto</td>
+</tr>
+
+<tr>
+<td>Momento de aplicación</td>
+<td>Durante el desarrollo</td>
+<td>Después del desarrollo</td>
+</tr>
+
+<tr>
+<td>Qué mide</td>
+<td>Tiempos, productividad y eficiencia</td>
+<td>Errores, rendimiento y complejidad</td>
+</tr>
+
+</table>
+
+</div>
+</div>
+
+<div class="summary">
+<h2>Resumen</h2>
+
+<p>
+Las métricas de calidad del software son herramientas fundamentales dentro del desarrollo de sistemas, ya que permiten medir y evaluar distintos aspectos relacionados con la construcción y funcionamiento de una aplicación. A través de estas métricas es posible obtener información objetiva que ayuda a los equipos de desarrollo a identificar problemas, mejorar procesos y garantizar que el software cumpla con los requisitos establecidos por los usuarios o por la organización.
+</p>
+
+<p>
+Dentro de las métricas de calidad existen dos tipos principales: las métricas de proceso y las métricas de producto. Las métricas de proceso se enfocan en analizar cómo se lleva a cabo el desarrollo del software, evaluando aspectos como el tiempo de desarrollo, la productividad del equipo de trabajo y la cantidad de errores detectados durante cada etapa del proyecto. Este tipo de métricas permite mejorar la organización del trabajo y optimizar las metodologías utilizadas durante el desarrollo del sistema.
+</p>
+
+<p>
+Por otro lado, las métricas de producto se utilizan para evaluar el software una vez que ha sido desarrollado. Estas métricas permiten analizar características del sistema como su rendimiento, la complejidad del código, la cantidad de fallos detectados y la eficiencia en su funcionamiento. Gracias a este tipo de mediciones es posible determinar si el software cumple con los estándares de calidad necesarios y si puede ofrecer una buena experiencia a los usuarios.
+</p>
+
+<p>
+El uso adecuado de métricas de proceso y métricas de producto es esencial para mejorar la calidad del software y apoyar la toma de decisiones durante el desarrollo de un proyecto. Estas métricas permiten identificar áreas de mejora tanto en la forma de trabajar del equipo como en el desempeño del sistema final, lo que contribuye a desarrollar software más confiable, eficiente y de mejor calidad.
+</p>
+
+</div>
+
+</body>
+</html>
